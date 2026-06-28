@@ -1,11 +1,22 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "searxng": {
+      "type": "local",
+      "command": ["npx", "-y", "mcp-searxng"],
+      "enabled": true,
+      "environment": {
+        "SEARXNG_URL": "http://localhost:9000",
+	"SEARXNG_HTML_FALLBACK": "true"
+      }
+    }
+  },
   "provider": {
     "llama.cpp": {
       "npm": "@ai-sdk/openai-compatible",
       "name": "llama-server (local)",
       "options": {
-        "baseURL": "http://127.0.0.1:8080/v1"
+        "baseURL": "http://localhost:8080/v1"
       },
       "models": {
         "unsloth/Qwen3.6-27B-GGUF:Q4_K_XL": {
@@ -14,7 +25,7 @@
             "temperature": 0.6
           },
           "limit": {
-            "context": 127000,
+            "context": 120000,
             "output": 16000
           }
         },
@@ -24,21 +35,21 @@
             "temperature": 0.6
           },
           "limit": {
-            "context": 262144,
+            "context": 250000,
             "output": 16000
           }
         },
         "unsloth/gemma-4-26B-A4B-it-GGUF:Q4_K_XL": {
           "name": "gemma-4-26B-A4B",
           "limit": {
-            "context": 262144,
+            "context": 250000,
             "output": 16000
           }
         },
         "unsloth/gemma-4-31B-it-GGUF:Q4_K_XL": {
           "name": "gemma-4-31B",
           "limit": {
-            "context": 48384,
+            "context": 40000,
             "output": 16000
           }
         }
