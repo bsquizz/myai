@@ -46,7 +46,7 @@
             "output": 16000
           }
         },
-        "unsloth/gemma-4-31B-it-GGUF:Q4_K_XL": {
+        "unsloth/gemma-4-31b-it-GGUF:Q4_K_XL": {
           "name": "gemma-4-31B",
           "limit": {
             "context": 40000,
