@@ -1,4 +1,4 @@
-# myai: My personal collection of servives for running local AI workflows.
+# myai: A personal collection of services for running local AI workflows.
 
 A Docker-based collection of services for running local AI workflows.
 
