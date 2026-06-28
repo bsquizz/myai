@@ -1,4 +1,4 @@
-# Local AI Workstation
+# myai: My personal collection of servives for running local AI workflows.
 
 A Docker-based collection of services for running local AI workflows.
 
@@ -35,8 +35,8 @@ Models are configured via `models.ini` and autoloaded by the llama.cpp server. T
 | Model | Alias | Context | Quantization |
 |---|---|---|---|
 | Qwen3.6-27B | `qwen3.6-27b` | 120k tokens | Q4_K_XL |
-| Qwen3.6-35B-A3B (MoE) | `qwen3.6-35b-a3b` | 200k tokens | Q4_K_XL |
-| Gemma 4-26B-A4B (MoE) | `gemma-4-26b-a4b` | 200k tokens | Q4_K_XL |
+| Qwen3.6-35B-A3B (MoE) | `qwen3.6-35b-a3b` | 250k tokens | Q4_K_XL |
+| Gemma 4-26B-A4B (MoE) | `gemma-4-26b-a4b` | 250k tokens | Q4_K_XL |
 | Gemma 4-31B | `gemma-4-31b` | 40k tokens | Q4_K_XL |
 
 The context was determined after some experimentation to stay within 24GB VRAM limits, leaving ~2.5-3.5GB for desktop overhead.
