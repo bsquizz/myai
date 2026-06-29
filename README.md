@@ -35,6 +35,7 @@ Models are configured via `models.ini` and autoloaded by the llama.cpp server. T
 | Model | Alias | Context (Desktop) | Context (Headless) | Quantization |
 |---|---|---|---|---|
 | Qwen3.6-27B | `qwen3.6-27b` | 98k | 151k | Q4_K_XL |
+| Qwen3.6-27B-MTP | `qwen3.6-27b-mtp` | - | 47k | Q4_K_XL |
 | Qwen3.6-35B-A3B (MoE) | `qwen3.6-35b-a3b` | 68k | 139k | Q4_K_XL |
 | Gemma 4-26B-A4B (MoE) | `gemma-4-26b-a4b` | 256k | 256k | Q4_K_XL |
 | Gemma 4-31B | `gemma-4-31b` | 27k | 67k | Q4_K_XL |

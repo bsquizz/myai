@@ -29,6 +29,16 @@
             "output": 16000
           }
         },
+        "unsloth/Qwen3.6-27B-MTP-GGUF:UD-Q4_K_XL": {
+          "name": "qwen3.6-27B-MTP",
+          "options": {
+            "temperature": 0.6
+          },
+          "limit": {
+            "context": 47104,
+            "output": 16000
+          }
+        },
         "unsloth/Qwen3.6-35B-A3B-GGUF:Q4_K_XL": {
           "name": "qwen3.6-35B-A3B",
           "options": {
