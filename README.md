@@ -39,7 +39,7 @@ Models are configured via `models.ini` and autoloaded by the llama.cpp server. T
 | Gemma 4-26B-A4B (MoE) | `gemma-4-26b-a4b` | 256k | 256k | Q4_K_XL |
 | Gemma 4-31B | `gemma-4-31b` | 27k | 67k | Q4_K_XL |
 
-The context was determined after some experimentation to stay within 24GB VRAM limits, leaving ~2.5-3.5GB for desktop overhead.
+The context was determined after some experimentation to stay within 24GB VRAM limits, leaving 1GB margin if operating in headless mode or 3GB for desktop overhead.
 
 Models will be downloaded into `models/` by llama-server using the Hugging Face API. After the initial download, they will persist in the 'models/' directory. Only one model is loaded at a time by llama-server (`--models-max 1`), but they are "hot swappable" and do not require a server restart to change to a different one.
 
