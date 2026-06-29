@@ -32,15 +32,16 @@ Services will be available at:
 
 Models are configured via `models.ini` and autoloaded by the llama.cpp server. The current setup includes:
 
-| Model | Alias | Context (Desktop) | Context (Headless) | Quantization |
+| Model | Alias | Context | Quantization |
 |---|---|---|---|---|
-| Qwen3.6-27B | `qwen3.6-27b` | 98k | 151k | Q4_K_XL |
-| Qwen3.6-27B-MTP | `qwen3.6-27b-mtp` | - | 47k | Q4_K_XL |
-| Qwen3.6-35B-A3B (MoE) | `qwen3.6-35b-a3b` | 68k | 139k | Q4_K_XL |
-| Gemma 4-26B-A4B (MoE) | `gemma-4-26b-a4b` | 256k | 256k | Q4_K_XL |
-| Gemma 4-31B | `gemma-4-31b` | 27k | 67k | Q4_K_XL |
+| Qwen3.6-27B | `qwen3.6-27b` | 151k | Q4_K_XL |
+| Qwen3.6-27B-MTP | `qwen3.6-27b-mtp` | 47k | Q4_K_XL |
+| Qwen3.6-35B-A3B (MoE) | `qwen3.6-35b-a3b` | 139k | Q4_K_XL |
+| Qwen3.6-35B-A3B-MTP (MoE) | `qwen3.6-35b-a3b-mtp` | 103k | Q4_K_XL |
+| Gemma 4-26B-A4B (MoE) | `gemma-4-26b-a4b` | 256k | Q4_K_XL |
+| Gemma 4-31B | `gemma-4-31b` | 67k | Q4_K_XL |
 
-The context was determined after some experimentation to stay within 24GB VRAM limits, leaving 1GB margin if operating in headless mode or 3GB for desktop overhead.
+The context sizes were determined by running `llama-server` with `--fit on --fit-target 1024` on a headless Ubuntu 26.04 system.
 
 Models will be downloaded into `models/` by llama-server using the Hugging Face API. After the initial download, they will persist in the 'models/' directory. Only one model is loaded at a time by llama-server (`--models-max 1`), but they are "hot swappable" and do not require a server restart to change to a different one.
 
@@ -89,7 +90,7 @@ To set up Open WebUI, navigate to http://localhost:3000 and set up an admin user
 4. Check the box to enable **Direct Connections** 
 5. Check the box to enable **Cache Base Model List**
 6. Click **Save**
-7. Navigate to **Models** on the left navigation. (you should now see 4 models)
+7. Navigate to **Models** on the left navigation. (you should now see 5 models)
 8. Enable or disable your models as desired. For each model you want to enable, I'd recommend disabling thinking for a better chat experience:
     - Click "Edit" icon next to the model
     - Next to "Advanced Params" click "Show"
@@ -122,7 +123,7 @@ custom_providers:
     format: openai
 ```
 
-Then type `hermes model` and scroll down until you see the `local` provider. You should see the 4 models running on llama.cpp show up here. Select one of them.
+Then type `hermes model` and scroll down until you see the `local` provider. You should see the 5 models running on llama.cpp show up here. Select one of them.
 
 #### Use searxng for web search tool calls
 
