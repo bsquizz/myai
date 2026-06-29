@@ -33,7 +33,7 @@ Services will be available at:
 Models are configured via `models.ini` and autoloaded by the llama.cpp server. The current setup includes:
 
 | Model | Alias | Context | Quantization |
-|---|---|---|---|---|
+|---|---|---|---|
 | Qwen3.6-27B | `qwen3.6-27b` | 151k | Q4_K_XL |
 | Qwen3.6-27B-MTP | `qwen3.6-27b-mtp` | 47k | Q4_K_XL |
 | Qwen3.6-35B-A3B (MoE) | `qwen3.6-35b-a3b` | 139k | Q4_K_XL |
