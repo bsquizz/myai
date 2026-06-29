@@ -32,12 +32,12 @@ Services will be available at:
 
 Models are configured via `models.ini` and autoloaded by the llama.cpp server. The current setup includes:
 
-| Model | Alias | Context | Quantization |
-|---|---|---|---|
-| Qwen3.6-27B | `qwen3.6-27b` | 120k tokens | Q4_K_XL |
-| Qwen3.6-35B-A3B (MoE) | `qwen3.6-35b-a3b` | 250k tokens | Q4_K_XL |
-| Gemma 4-26B-A4B (MoE) | `gemma-4-26b-a4b` | 250k tokens | Q4_K_XL |
-| Gemma 4-31B | `gemma-4-31b` | 40k tokens | Q4_K_XL |
+| Model | Alias | Context (Desktop) | Context (Headless) | Quantization |
+|---|---|---|---|---|
+| Qwen3.6-27B | `qwen3.6-27b` | 98k | 151k | Q4_K_XL |
+| Qwen3.6-35B-A3B (MoE) | `qwen3.6-35b-a3b` | 68k | 139k | Q4_K_XL |
+| Gemma 4-26B-A4B (MoE) | `gemma-4-26b-a4b` | 256k | 256k | Q4_K_XL |
+| Gemma 4-31B | `gemma-4-31b` | 27k | 67k | Q4_K_XL |
 
 The context was determined after some experimentation to stay within 24GB VRAM limits, leaving ~2.5-3.5GB for desktop overhead.
 
